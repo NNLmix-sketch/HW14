@@ -58,9 +58,9 @@ h2, h3 {
 //HEADER
 .header-wrap {
 	margin: 70px 0 40px 0;
-	.header {
-		width: 1200px;
-		margin: 0 auto;
+	#header {
+		// width: 1200px;
+		// margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		.logo {
@@ -155,10 +155,8 @@ h2, h3 {
 }
 //HERO
 .hero-wrap {
-	.hero {
+	#hero {
 		background: white;
-		width: 1200px;
-		margin: 0 auto;
 		.hero__row {
 			padding: 70px;
 			display: flex;
@@ -327,6 +325,8 @@ h2, h3 {
 						margin-bottom: 70px;
 						p {
 							line-height: $line;
+							font-size: $smallFont;
+							color: $mainColor;
 						}
 						.link {
 							margin: 40px 0 20px 0;
@@ -444,10 +444,9 @@ h2, h3 {
 //FOOTER
 .footer-wrap {
 	padding: 100px 0 140px 0;
-	.footer {
+	#footer {
 		.row {
-			
-			.col-3 {
+			div {
 				section.widget {
 					h3 {
 						font-size: $midFont;
@@ -456,7 +455,7 @@ h2, h3 {
 					}
 					ul {
 						li {
-							padding: 5px 0;
+							padding: 8px 0;
 							a {
 								color: $mainColor;
 								text-decoration: underline;
@@ -470,13 +469,16 @@ h2, h3 {
 							}
 						}
 					}
-					.contact__list {
+					ul.contacts{
 						display: flex;
-						// li {
-						// 	a {
-
-						// 	}
-						// }
+						li {
+							margin-right: 8px;
+							a {
+								svg {
+									font-size: $bigFont;
+								}
+							}
+						}
 					}
 					p {
 						display: flex;
@@ -520,16 +522,224 @@ h2, h3 {
 
 //ADAPTIVE
 @media screen and (max-width: 1270px) {
-	.header {
-		width: 1000px;
+	#header,
+	#hero,
+	.contain  {
+		width: 960px;
 	}
-	.hero {
-		width: 1000px;
+	#header {
+		.logo {
+			width: 220px;
+			h1 {
+				font-size: $largestFont * 0.9;
+			}
+			span {
+				font-size: 0.95rem;
+			}
+		}
+		.nav {
+			width: 620px;
+			ul.navig {
+				li.navig__item {
+					margin-left: 12px;
+					a.navig__link {
+						font-size: $smallFont * 0.95;
+					}
+				}
+			}
+		}
 	}
-	.contain {
-		width: 1000px;
+	.hero-wrap {
+		#hero {
+			.hero__row {
+				padding: 60px;
+				div.column-1 {
+					width: 60%;
+					h2 {
+						font-size: $largestFont * 0.9;
+					}
+					p {
+						font-size: $largestFont * 0.9;
+					}
+				}
+				div.column-2 {
+					width: 40%;
+					ul {
+						li {
+							a {
+								font-size: $largestFont * 0.8;	
+							}
+						}
+					}
+				}
+			}
+		}
 	}
-	.footer {
-		width: 1000px;
+	.portfolio-wrap {
+		.contain {
+			.row {
+				.col-12-medium {
+					section {
+						width: 300px;
+						a {
+							img {
+								width: 300px;
+								height: 240px;
+							}
+						}
+						.context {
+							.heading {
+								h2 {
+									font-size: $midFont * 0.9;
+								}
+								p {
+									font-size: $smallFont * 0.9;
+								}
+							}
+							p {
+								font-size: $smallFont * 0.9;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
+	.main-wrap {
+		.contain {
+			.row {
+				.col-12-medium {
+					.sidebar {
+						h3 {
+							font-size: $midFont * 0.9;
+						}
+						.grid {
+							.row {
+								.col-6 {
+									a {
+										img {
+											width: 150px;
+											height: 75px;
+										}
+									}
+								}
+							}
+						}
+						a.button {
+							font-size: $midFont * 0.9;
+						}
+						section {
+							p {
+								font-size: $smallFont * 0.9;
+							}
+							.link {
+								a {
+									font-size: $midFont * 0.9;
+								}
+							}
+							ul {
+								li {
+									a {
+										font-size: $smallFont * 0.9;
+									}
+								}
+							}
+						}
+					}
+					.content {
+						section.last {
+							h2 {
+								font-size: $bigFont * 0.9;
+							}
+							p {
+								font-size: $smallFont * 0.9;
+							}
+							a.button__last {
+								font-size: $midFont * 0.9;
+							}
+						}
+						article {
+							h2 {
+								font-size: $bigFont * 0.9;
+							}
+							p {
+								font-size: $smallFont * 0.9;
+							}
+							h3 {
+								font-size: $midFont * 0.9;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.main-no-wrap {
+		.contain {
+			.content {
+				article {
+					h2 {
+						font-size: $bigFont * 0.9;
+					}
+					p {
+						font-size: $smallFont * 0.9;
+					}
+					h3 {
+						font-size: $midFont * 0.9;
+					}
+				}
+			}
+		}
+	}
+	.footer-wrap {
+		#footer {
+			.row {
+				div {
+					section.widget {
+						h3 {
+							font-size: $midFont * 0.85;
+						}
+						ul {
+							li {
+								a {
+									font-size: $smallFont * 0.85;
+								}
+							}
+						}
+						ul.contacts{
+							li {
+								a {
+									svg {
+										font-size: $bigFont * 0.85;
+									}
+								}
+							}
+						}
+						p {
+							span {
+								font-size: $smallFont * 0.85;
+							}
+						}
+					}
+				}
+				&:last-of-type {
+					.col-12 {
+						.copyright {
+							ul {
+								li {
+									font-size: $smallFont * 0.85;
+									a {
+										font-size: $smallFont * 0.85;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1000px) {
+
 }

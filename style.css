@@ -53,48 +53,46 @@ h2, h3 {
 
 .header-wrap {
   margin: 70px 0 40px 0; }
-  .header-wrap .header {
-    width: 1200px;
-    margin: 0 auto;
+  .header-wrap #header {
     display: flex;
     justify-content: space-between; }
-    .header-wrap .header .logo {
+    .header-wrap #header .logo {
       width: 260px;
       display: flex; }
-      .header-wrap .header .logo h1 {
+      .header-wrap #header .logo h1 {
         font-size: 3rem;
         border-radius: 5px;
         padding: 5px 10px;
         background: #fd2893; }
-        .header-wrap .header .logo h1 a {
+        .header-wrap #header .logo h1 a {
           text-decoration: none;
           font-weight: bold;
           color: white; }
-      .header-wrap .header .logo span {
+      .header-wrap #header .logo span {
         margin-left: 20px;
         display: flex;
         font-weight: bold;
         color: #4d4b4b;
         align-items: center; }
-    .header-wrap .header .nav {
+    .header-wrap #header .nav {
       width: 720px;
       display: flex;
       justify-content: flex-end;
       align-items: center; }
-      .header-wrap .header .nav ul.navig {
+      .header-wrap #header .nav ul.navig {
         display: flex; }
-        .header-wrap .header .nav ul.navig li.navig__item {
+        .header-wrap #header .nav ul.navig li.navig__item {
           padding: 10px;
           transition: all 1s;
           margin-left: 15px;
           position: relative; }
-          .header-wrap .header .nav ul.navig li.navig__item a.navig__link {
+          .header-wrap #header .nav ul.navig li.navig__item a.navig__link {
             color: #4d4b4b;
             font-weight: bold;
             font-size: 1.2rem;
             letter-spacing: 1px;
             text-decoration: none; }
-          .header-wrap .header .nav ul.navig li.navig__item ul.subnav {
+          .header-wrap #header .nav ul.navig li.navig__item ul.subnav {
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -103,16 +101,16 @@ h2, h3 {
             left: 0;
             display: none;
             margin-top: 15px; }
-            .header-wrap .header .nav ul.navig li.navig__item ul.subnav li.subnav__item {
+            .header-wrap #header .nav ul.navig li.navig__item ul.subnav li.subnav__item {
               width: 150%;
               position: relative;
               padding: 10px 10px 10px 15px;
               border-bottom: 2px solid lightgray;
               background: white; }
-              .header-wrap .header .nav ul.navig li.navig__item ul.subnav li.subnav__item a.subnav__link {
+              .header-wrap #header .nav ul.navig li.navig__item ul.subnav li.subnav__item a.subnav__link {
                 text-decoration: none;
                 color: #4d4b4b; }
-              .header-wrap .header .nav ul.navig li.navig__item ul.subnav li.subnav__item:first-of-type::before {
+              .header-wrap #header .nav ul.navig li.navig__item ul.subnav li.subnav__item:first-of-type::before {
                 content: "";
                 width: 0;
                 height: 0;
@@ -122,70 +120,68 @@ h2, h3 {
                 display: block;
                 border: 8px solid transparent;
                 border-bottom-color: white; }
-          .header-wrap .header .nav ul.navig li.navig__item:nth-of-type(2):hover ul.subnav {
+          .header-wrap #header .nav ul.navig li.navig__item:nth-of-type(2):hover ul.subnav {
             transition: all 1s;
             display: block; }
-          .header-wrap .header .nav ul.navig li.navig__item:hover {
+          .header-wrap #header .nav ul.navig li.navig__item:hover {
             border-radius: 5px;
             transition: all 1s;
             background: white; }
 
-.hero-wrap .hero {
-  background: white;
-  width: 1200px;
-  margin: 0 auto; }
-  .hero-wrap .hero .hero__row {
+.hero-wrap #hero {
+  background: white; }
+  .hero-wrap #hero .hero__row {
     padding: 70px;
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
     border-bottom: 2px solid lightgray; }
-    .hero-wrap .hero .hero__row div.column-1 {
+    .hero-wrap #hero .hero__row div.column-1 {
       width: 60%; }
-      .hero-wrap .hero .hero__row div.column-1 h2 {
+      .hero-wrap #hero .hero__row div.column-1 h2 {
         font-size: 3rem;
         margin: 5px 0 20px 0;
         color: #4d4b4b; }
-      .hero-wrap .hero .hero__row div.column-1 p {
+      .hero-wrap #hero .hero__row div.column-1 p {
         font-size: 3rem;
         line-height: 70px;
         color: #4d4b4b; }
-    .hero-wrap .hero .hero__row div.column-2 {
+    .hero-wrap #hero .hero__row div.column-2 {
       width: 40%; }
-      .hero-wrap .hero .hero__row div.column-2 ul {
+      .hero-wrap #hero .hero__row div.column-2 ul {
         margin-left: 30px; }
-        .hero-wrap .hero .hero__row div.column-2 ul li {
+        .hero-wrap #hero .hero__row div.column-2 ul li {
           padding: 25px 30px;
           border-radius: 5px;
           position: relative; }
-          .hero-wrap .hero .hero__row div.column-2 ul li a {
+          .hero-wrap #hero .hero__row div.column-2 ul li a {
             text-decoration: none;
             font-size: 3rem;
             font-weight: bold; }
-          .hero-wrap .hero .hero__row div.column-2 ul li .fa-arrow-circle-right {
+          .hero-wrap #hero .hero__row div.column-2 ul li .fa-arrow-circle-right {
             position: absolute;
             top: 40%;
             cursor: pointer; }
-          .hero-wrap .hero .hero__row div.column-2 ul li .fa-question-circle {
+          .hero-wrap #hero .hero__row div.column-2 ul li .fa-question-circle {
             position: absolute;
             top: 40%;
             cursor: pointer; }
-          .hero-wrap .hero .hero__row div.column-2 ul li:first-of-type {
+          .hero-wrap #hero .hero__row div.column-2 ul li:first-of-type {
             background: #1f9aff;
             transition: all 1s;
             margin-bottom: 20px; }
-            .hero-wrap .hero .hero__row div.column-2 ul li:first-of-type a {
+            .hero-wrap #hero .hero__row div.column-2 ul li:first-of-type a {
               color: white;
               padding: 20px; }
-            .hero-wrap .hero .hero__row div.column-2 ul li:first-of-type:hover {
+            .hero-wrap #hero .hero__row div.column-2 ul li:first-of-type:hover {
               background: #116fbb; }
-          .hero-wrap .hero .hero__row div.column-2 ul li:last-of-type {
+          .hero-wrap #hero .hero__row div.column-2 ul li:last-of-type {
             transition: all 1s;
             background: #faf7f1; }
-            .hero-wrap .hero .hero__row div.column-2 ul li:last-of-type a {
+            .hero-wrap #hero .hero__row div.column-2 ul li:last-of-type a {
               color: #4d4b4b;
               padding: 25px; }
-            .hero-wrap .hero .hero__row div.column-2 ul li:last-of-type:hover {
+            .hero-wrap #hero .hero__row div.column-2 ul li:last-of-type:hover {
               transition: all 1s;
               background: #fdedcc; }
 
@@ -250,7 +246,9 @@ h2, h3 {
   .main-wrap .contain .row .col-12-medium .sidebar section {
     margin-bottom: 70px; }
     .main-wrap .contain .row .col-12-medium .sidebar section p {
-      line-height: 2rem; }
+      line-height: 2rem;
+      font-size: 1.2rem;
+      color: #4d4b4b; }
     .main-wrap .contain .row .col-12-medium .sidebar section .link {
       margin: 40px 0 20px 0; }
       .main-wrap .contain .row .col-12-medium .sidebar section .link a {
@@ -330,57 +328,138 @@ h2, h3 {
 
 .footer-wrap {
   padding: 100px 0 140px 0; }
-  .footer-wrap .footer .row .col-3 section.widget h3 {
+  .footer-wrap #footer .row div section.widget h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #4d4b4b; }
-  .footer-wrap .footer .row .col-3 section.widget ul li {
-    padding: 5px 0; }
-    .footer-wrap .footer .row .col-3 section.widget ul li a {
+  .footer-wrap #footer .row div section.widget ul li {
+    padding: 8px 0; }
+    .footer-wrap #footer .row div section.widget ul li a {
       color: #4d4b4b;
       text-decoration: underline;
       font-size: 1.2rem; }
-      .footer-wrap .footer .row .col-3 section.widget ul li a:hover {
+      .footer-wrap #footer .row div section.widget ul li a:hover {
         text-decoration: none; }
-    .footer-wrap .footer .row .col-3 section.widget ul li:last-child:hover {
+    .footer-wrap #footer .row div section.widget ul li:last-child:hover {
       text-decoration: underline; }
-  .footer-wrap .footer .row .col-3 section.widget .contact__list {
+  .footer-wrap #footer .row div section.widget ul.contacts {
     display: flex; }
-  .footer-wrap .footer .row .col-3 section.widget p {
+    .footer-wrap #footer .row div section.widget ul.contacts li {
+      margin-right: 8px; }
+      .footer-wrap #footer .row div section.widget ul.contacts li a svg {
+        font-size: 2.5rem; }
+  .footer-wrap #footer .row div section.widget p {
     display: flex;
     flex-direction: column; }
-    .footer-wrap .footer .row .col-3 section.widget p span {
+    .footer-wrap #footer .row div section.widget p span {
       padding: 10px 0;
       font-size: 1.2rem;
       color: #4d4b4b; }
-  .footer-wrap .footer .row:last-of-type {
+  .footer-wrap #footer .row:last-of-type {
     margin-top: 70px; }
-    .footer-wrap .footer .row:last-of-type .col-12 .copyright ul {
+    .footer-wrap #footer .row:last-of-type .col-12 .copyright ul {
       display: flex;
       justify-content: center; }
-      .footer-wrap .footer .row:last-of-type .col-12 .copyright ul li {
+      .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li {
         border-right: 2px solid lightgray;
         margin: 0 10px;
         color: #4d4b4b;
         font-size: 1.2rem; }
-        .footer-wrap .footer .row:last-of-type .col-12 .copyright ul li a {
+        .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li a {
           text-decoration: underline;
           color: #4d4b4b;
           font-size: 1.2rem; }
-          .footer-wrap .footer .row:last-of-type .col-12 .copyright ul li a:hover {
+          .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li a:hover {
             text-decoration: none; }
 
 @media screen and (max-width: 1270px) {
-  .header {
-    width: 1000px; }
-
-  .hero {
-    width: 1000px; }
-
+  #header,
+  #hero,
   .contain {
-    width: 1000px; }
+    width: 960px; }
 
-  .footer {
-    width: 1000px; } }
+  #header .logo {
+    width: 220px; }
+    #header .logo h1 {
+      font-size: 2.7rem; }
+    #header .logo span {
+      font-size: 0.95rem; }
+  #header .nav {
+    width: 620px; }
+    #header .nav ul.navig li.navig__item {
+      margin-left: 12px; }
+      #header .nav ul.navig li.navig__item a.navig__link {
+        font-size: 1.14rem; }
+
+  .hero-wrap #hero .hero__row {
+    padding: 60px; }
+    .hero-wrap #hero .hero__row div.column-1 {
+      width: 60%; }
+      .hero-wrap #hero .hero__row div.column-1 h2 {
+        font-size: 2.7rem; }
+      .hero-wrap #hero .hero__row div.column-1 p {
+        font-size: 2.7rem; }
+    .hero-wrap #hero .hero__row div.column-2 {
+      width: 40%; }
+      .hero-wrap #hero .hero__row div.column-2 ul li a {
+        font-size: 2.4rem; }
+
+  .portfolio-wrap .contain .row .col-12-medium section {
+    width: 300px; }
+    .portfolio-wrap .contain .row .col-12-medium section a img {
+      width: 300px;
+      height: 240px; }
+    .portfolio-wrap .contain .row .col-12-medium section .context .heading h2 {
+      font-size: 1.62rem; }
+    .portfolio-wrap .contain .row .col-12-medium section .context .heading p {
+      font-size: 1.08rem; }
+    .portfolio-wrap .contain .row .col-12-medium section .context p {
+      font-size: 1.08rem; }
+
+  .main-wrap .contain .row .col-12-medium .sidebar h3 {
+    font-size: 1.62rem; }
+  .main-wrap .contain .row .col-12-medium .sidebar .grid .row .col-6 a img {
+    width: 150px;
+    height: 75px; }
+  .main-wrap .contain .row .col-12-medium .sidebar a.button {
+    font-size: 1.62rem; }
+  .main-wrap .contain .row .col-12-medium .sidebar section p {
+    font-size: 1.08rem; }
+  .main-wrap .contain .row .col-12-medium .sidebar section .link a {
+    font-size: 1.62rem; }
+  .main-wrap .contain .row .col-12-medium .sidebar section ul li a {
+    font-size: 1.08rem; }
+  .main-wrap .contain .row .col-12-medium .content section.last h2 {
+    font-size: 2.25rem; }
+  .main-wrap .contain .row .col-12-medium .content section.last p {
+    font-size: 1.08rem; }
+  .main-wrap .contain .row .col-12-medium .content section.last a.button__last {
+    font-size: 1.62rem; }
+  .main-wrap .contain .row .col-12-medium .content article h2 {
+    font-size: 2.25rem; }
+  .main-wrap .contain .row .col-12-medium .content article p {
+    font-size: 1.08rem; }
+  .main-wrap .contain .row .col-12-medium .content article h3 {
+    font-size: 1.62rem; }
+
+  .main-no-wrap .contain .content article h2 {
+    font-size: 2.25rem; }
+  .main-no-wrap .contain .content article p {
+    font-size: 1.08rem; }
+  .main-no-wrap .contain .content article h3 {
+    font-size: 1.62rem; }
+
+  .footer-wrap #footer .row div section.widget h3 {
+    font-size: 1.53rem; }
+  .footer-wrap #footer .row div section.widget ul li a {
+    font-size: 1.02rem; }
+  .footer-wrap #footer .row div section.widget ul.contacts li a svg {
+    font-size: 2.125rem; }
+  .footer-wrap #footer .row div section.widget p span {
+    font-size: 1.02rem; }
+  .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li {
+    font-size: 1.02rem; }
+    .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li a {
+      font-size: 1.02rem; } }
 
 /*# sourceMappingURL=style.css.map */
