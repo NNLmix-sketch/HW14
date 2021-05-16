@@ -44,7 +44,6 @@ body {
   background: #eedec4 url("img/bg.jpg"); }
 
 .wrapper {
-  position: relative;
   overflow-x: hidden; }
 
 .content-wrap {
@@ -186,6 +185,8 @@ h2, h3 {
             left: 0;
             display: none;
             margin-top: 15px; }
+            .header-wrap #header .nav ul.navig li.navig__item ul.subnav:hover li.navig__item:nth-of-type(2) {
+              background-color: white; }
             .header-wrap #header .nav ul.navig li.navig__item ul.subnav li.subnav__item {
               width: 150%;
               position: relative;
@@ -204,7 +205,7 @@ h2, h3 {
                 left: 10%;
                 display: block;
                 border: 8px solid transparent;
-                border-bottom-color: white; }
+                border-bottom-color: lightgreen; }
           .header-wrap #header .nav ul.navig li.navig__item:nth-of-type(2):hover ul.subnav {
             transition: all 1s;
             display: block; }
@@ -274,28 +275,28 @@ h2, h3 {
 
 .portfolio-wrap {
   padding: 50px 0; }
-  .portfolio-wrap .contain .row .col-12-medium section {
+  .portfolio-wrap .contain .row .col-12-md section {
     background-color: white;
     width: 375px;
     border-radius: 10px;
     border-bottom: 2px solid lightgray; }
-    .portfolio-wrap .contain .row .col-12-medium section a img {
+    .portfolio-wrap .contain .row .col-12-md section a img {
       width: 375px;
       height: 290px;
       border-radius: 10px 10px 0 0; }
-    .portfolio-wrap .contain .row .col-12-medium section .context {
+    .portfolio-wrap .contain .row .col-12-md section .context {
       padding: 60px 30px 50px 30px; }
-      .portfolio-wrap .contain .row .col-12-medium section .context .heading {
+      .portfolio-wrap .contain .row .col-12-md section .context .heading {
         margin-bottom: 30px; }
-        .portfolio-wrap .contain .row .col-12-medium section .context .heading h2 {
+        .portfolio-wrap .contain .row .col-12-md section .context .heading h2 {
           margin-bottom: 5px;
           font-size: 1.8rem;
           color: #4d4b4b; }
-        .portfolio-wrap .contain .row .col-12-medium section .context .heading p {
+        .portfolio-wrap .contain .row .col-12-md section .context .heading p {
           color: #4d4b4b;
           font-size: 1.2rem;
           line-height: 2rem; }
-      .portfolio-wrap .contain .row .col-12-medium section .context p {
+      .portfolio-wrap .contain .row .col-12-md section .context p {
         font-size: 1.2rem;
         color: #4d4b4b;
         line-height: 2rem; }
@@ -304,18 +305,18 @@ h2, h3 {
   padding: 80px 0;
   background-color: white;
   border-bottom: 2px solid lightgray; }
-  .main-wrap .contain .row .col-12-medium .sidebar h3 {
+  .main-wrap .contain .row div .sidebar h3 {
     margin-bottom: 30px;
     font-size: 1.8rem;
     color: #4d4b4b; }
-  .main-wrap .contain .row .col-12-medium .sidebar .grid {
+  .main-wrap .contain .row div .sidebar .grid {
     margin-bottom: 40px; }
-    .main-wrap .contain .row .col-12-medium .sidebar .grid .row .col-6 a img {
+    .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
       width: 180px;
       height: 90px;
       margin-bottom: 20px;
       border-radius: 10px; }
-  .main-wrap .contain .row .col-12-medium .sidebar a.button {
+  .main-wrap .contain .row div .sidebar ul li a.button {
     padding: 20px 40px;
     border-radius: 5px;
     color: white;
@@ -324,50 +325,53 @@ h2, h3 {
     font-size: 1.8rem;
     font-weight: bold;
     background: #1f9aff; }
-    .main-wrap .contain .row .col-12-medium .sidebar a.button:hover {
+    .main-wrap .contain .row div .sidebar ul li a.button:hover {
       text-decoration: none;
       transition: all 1s;
       background: #116fbb; }
-    .main-wrap .contain .row .col-12-medium .sidebar a.button strong {
+    .main-wrap .contain .row div .sidebar ul li a.button strong {
       margin-left: 10px; }
-  .main-wrap .contain .row .col-12-medium .sidebar section {
+  .main-wrap .contain .row div .sidebar section {
     margin-bottom: 70px; }
-    .main-wrap .contain .row .col-12-medium .sidebar section p {
+    .main-wrap .contain .row div .sidebar section p {
       line-height: 2rem;
       font-size: 1.2rem;
       color: #4d4b4b; }
-    .main-wrap .contain .row .col-12-medium .sidebar section .link {
+    .main-wrap .contain .row div .sidebar section .link {
       margin: 40px 0 20px 0; }
-      .main-wrap .contain .row .col-12-medium .sidebar section .link a {
+      .main-wrap .contain .row div .sidebar section .link a {
         padding: 20px 30px;
         background: #1f9aff;
         border-radius: 5px;
         font-size: 1.8rem; }
-        .main-wrap .contain .row .col-12-medium .sidebar section .link a strong {
+        .main-wrap .contain .row div .sidebar section .link a strong {
           margin-left: 10px;
           color: white; }
-      .main-wrap .contain .row .col-12-medium .sidebar section .link:hover a {
+      .main-wrap .contain .row div .sidebar section .link:hover a {
         background: #116fbb;
         text-decoration: none; }
-    .main-wrap .contain .row .col-12-medium .sidebar section ul li {
-      padding: 10px 0; }
-      .main-wrap .contain .row .col-12-medium .sidebar section ul li a {
-        font-size: 1.2rem;
-        text-decoration: underline; }
-      .main-wrap .contain .row .col-12-medium .sidebar section ul li:hover a {
-        text-decoration: none; }
-  .main-wrap .contain .row .col-12-medium .content {
+    .main-wrap .contain .row div .sidebar section ul {
+      display: flex;
+      flex-direction: column; }
+      .main-wrap .contain .row div .sidebar section ul li {
+        padding: 10px 0; }
+        .main-wrap .contain .row div .sidebar section ul li a {
+          font-size: 1.2rem;
+          text-decoration: underline; }
+        .main-wrap .contain .row div .sidebar section ul li:hover a {
+          text-decoration: none; }
+  .main-wrap .contain .row div .content {
     margin-left: 40px; }
-    .main-wrap .contain .row .col-12-medium .content section.last h2 {
+    .main-wrap .contain .row div .content section.last h2 {
       margin-bottom: 40px;
       font-size: 2.5rem;
       color: #4d4b4b; }
-    .main-wrap .contain .row .col-12-medium .content section.last p {
+    .main-wrap .contain .row div .content section.last p {
       margin-bottom: 30px;
       line-height: 2rem;
       font-size: 1.2rem;
       color: #4d4b4b; }
-    .main-wrap .contain .row .col-12-medium .content section.last a.button__last {
+    .main-wrap .contain .row div .content section.last ul li a.button__last {
       padding: 10px 30px;
       color: white;
       border-radius: 5px;
@@ -375,25 +379,27 @@ h2, h3 {
       transition: all 1s;
       font-weight: bold;
       background: #1f9aff; }
-      .main-wrap .contain .row .col-12-medium .content section.last a.button__last:hover {
+      .main-wrap .contain .row div .content section.last ul li a.button__last:hover {
         background: #116fbb;
         text-decoration: none;
         transition: all 1s; }
-      .main-wrap .contain .row .col-12-medium .content section.last a.button__last strong {
+      .main-wrap .contain .row div .content section.last ul li a.button__last strong {
         margin-left: 10px; }
-    .main-wrap .contain .row .col-12-medium .content article h2 {
+    .main-wrap .contain .row div .content article h2 {
       margin-bottom: 40px;
       font-size: 2.5rem;
-      color: #4d4b4b; }
-    .main-wrap .contain .row .col-12-medium .content article p {
+      color: #4d4b4b;
+      text-align: center; }
+    .main-wrap .contain .row div .content article p {
       margin-bottom: 30px;
       font-size: 1.2rem;
       line-height: 2rem;
       color: #4d4b4b; }
-    .main-wrap .contain .row .col-12-medium .content article h3 {
+    .main-wrap .contain .row div .content article h3 {
       margin-bottom: 20px;
       font-size: 1.8rem;
-      color: #4d4b4b; }
+      color: #4d4b4b;
+      text-align: center; }
 
 .main-no-wrap {
   padding: 80px 0;
@@ -415,33 +421,37 @@ h2, h3 {
 
 .footer-wrap {
   padding: 100px 0 140px 0; }
-  .footer-wrap #footer .row div section.widget h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #4d4b4b; }
-  .footer-wrap #footer .row div section.widget ul li {
-    padding: 8px 0; }
-    .footer-wrap #footer .row div section.widget ul li a {
-      color: #4d4b4b;
-      text-decoration: underline;
-      font-size: 1.2rem; }
-      .footer-wrap #footer .row div section.widget ul li a:hover {
-        text-decoration: none; }
-    .footer-wrap #footer .row div section.widget ul li:last-child:hover {
-      text-decoration: underline; }
-  .footer-wrap #footer .row div section.widget ul.contacts {
-    display: flex; }
-    .footer-wrap #footer .row div section.widget ul.contacts li {
-      margin-right: 8px; }
-      .footer-wrap #footer .row div section.widget ul.contacts li a svg {
-        font-size: 2.5rem; }
-  .footer-wrap #footer .row div section.widget p {
+  .footer-wrap #footer .row div div.widget {
     display: flex;
-    flex-direction: column; }
-    .footer-wrap #footer .row div section.widget p span {
-      padding: 10px 0;
-      font-size: 1.2rem;
+    flex-direction: column;
+    margin-bottom: 20px; }
+    .footer-wrap #footer .row div div.widget h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
       color: #4d4b4b; }
+    .footer-wrap #footer .row div div.widget ul li {
+      padding: 8px 0; }
+      .footer-wrap #footer .row div div.widget ul li a {
+        color: #4d4b4b;
+        text-decoration: underline;
+        font-size: 1.2rem; }
+        .footer-wrap #footer .row div div.widget ul li a:hover {
+          text-decoration: none; }
+      .footer-wrap #footer .row div div.widget ul li:last-child:hover {
+        text-decoration: underline; }
+    .footer-wrap #footer .row div div.widget ul.contacts {
+      display: flex; }
+      .footer-wrap #footer .row div div.widget ul.contacts li {
+        margin-right: 8px; }
+        .footer-wrap #footer .row div div.widget ul.contacts li a svg {
+          font-size: 2.5rem; }
+    .footer-wrap #footer .row div div.widget p {
+      display: flex;
+      flex-direction: column; }
+      .footer-wrap #footer .row div div.widget p span {
+        padding: 10px 0;
+        font-size: 1.2rem;
+        color: #4d4b4b; }
   .footer-wrap #footer .row:last-of-type {
     margin-top: 70px; }
     .footer-wrap #footer .row:last-of-type .col-12 .copyright ul {
@@ -541,42 +551,42 @@ section.navig-panel {
       .hero-wrap #hero .hero__row div.column-2 ul li a {
         font-size: 2.4rem; }
 
-  .portfolio-wrap .contain .row .col-12-medium section {
+  .portfolio-wrap .contain .row .col-12-md section {
     width: 300px; }
-    .portfolio-wrap .contain .row .col-12-medium section a img {
+    .portfolio-wrap .contain .row .col-12-md section a img {
       width: 300px;
       height: 240px; }
-    .portfolio-wrap .contain .row .col-12-medium section .context .heading h2 {
+    .portfolio-wrap .contain .row .col-12-md section .context .heading h2 {
       font-size: 1.62rem; }
-    .portfolio-wrap .contain .row .col-12-medium section .context .heading p {
+    .portfolio-wrap .contain .row .col-12-md section .context .heading p {
       font-size: 1.08rem; }
-    .portfolio-wrap .contain .row .col-12-medium section .context p {
+    .portfolio-wrap .contain .row .col-12-md section .context p {
       font-size: 1.08rem; }
 
-  .main-wrap .contain .row .col-12-medium .sidebar h3 {
+  .main-wrap .contain .row div .sidebar h3 {
     font-size: 1.62rem; }
-  .main-wrap .contain .row .col-12-medium .sidebar .grid .row .col-6 a img {
+  .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
     width: 150px;
     height: 75px; }
-  .main-wrap .contain .row .col-12-medium .sidebar a.button {
+  .main-wrap .contain .row div .sidebar ul li a.button {
     font-size: 1.62rem; }
-  .main-wrap .contain .row .col-12-medium .sidebar section p {
+  .main-wrap .contain .row div .sidebar section p {
     font-size: 1.08rem; }
-  .main-wrap .contain .row .col-12-medium .sidebar section .link a {
+  .main-wrap .contain .row div .sidebar section .link a {
     font-size: 1.62rem; }
-  .main-wrap .contain .row .col-12-medium .sidebar section ul li a {
+  .main-wrap .contain .row div .sidebar section ul li a {
     font-size: 1.08rem; }
-  .main-wrap .contain .row .col-12-medium .content section.last h2 {
+  .main-wrap .contain .row div .content section.last h2 {
     font-size: 2.25rem; }
-  .main-wrap .contain .row .col-12-medium .content section.last p {
+  .main-wrap .contain .row div .content section.last p {
     font-size: 1.08rem; }
-  .main-wrap .contain .row .col-12-medium .content section.last a.button__last {
+  .main-wrap .contain .row div .content section.last ul li a.button__last {
     font-size: 1.62rem; }
-  .main-wrap .contain .row .col-12-medium .content article h2 {
+  .main-wrap .contain .row div .content article h2 {
     font-size: 2.25rem; }
-  .main-wrap .contain .row .col-12-medium .content article p {
+  .main-wrap .contain .row div .content article p {
     font-size: 1.08rem; }
-  .main-wrap .contain .row .col-12-medium .content article h3 {
+  .main-wrap .contain .row div .content article h3 {
     font-size: 1.62rem; }
 
   .main-no-wrap .contain .content article h2 {
@@ -586,13 +596,13 @@ section.navig-panel {
   .main-no-wrap .contain .content article h3 {
     font-size: 1.62rem; }
 
-  .footer-wrap #footer .row div section.widget h3 {
+  .footer-wrap #footer .row div div.widget h3 {
     font-size: 1.53rem; }
-  .footer-wrap #footer .row div section.widget ul li a {
+  .footer-wrap #footer .row div div.widget ul li a {
     font-size: 1.02rem; }
-  .footer-wrap #footer .row div section.widget ul.contacts li a svg {
+  .footer-wrap #footer .row div div.widget ul.contacts li a svg {
     font-size: 2.125rem; }
-  .footer-wrap #footer .row div section.widget p span {
+  .footer-wrap #footer .row div div.widget p span {
     font-size: 1.02rem; }
   .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li {
     font-size: 1.02rem; }
@@ -667,76 +677,127 @@ section.navig-panel {
 
   .portfolio-wrap .contain .row {
     flex-direction: column; }
-    .portfolio-wrap .contain .row .col-12-medium {
+    .portfolio-wrap .contain .row .col-12-md {
       margin-bottom: 20px; }
-      .portfolio-wrap .contain .row .col-12-medium section {
+      .portfolio-wrap .contain .row .col-12-md section {
         width: 89vw; }
-        .portfolio-wrap .contain .row .col-12-medium section a img {
+        .portfolio-wrap .contain .row .col-12-md section a img {
           width: 89vw;
           height: 65vw; }
-        .portfolio-wrap .contain .row .col-12-medium section .context .heading h2 {
-          font-size: 1.8rem;
+        .portfolio-wrap .contain .row .col-12-md section .context .heading h2 {
           text-align: center; }
-        .portfolio-wrap .contain .row .col-12-medium section .context .heading p {
-          font-size: 1.2rem;
+        .portfolio-wrap .contain .row .col-12-md section .context .heading p {
           text-align: center; }
-        .portfolio-wrap .contain .row .col-12-medium section .context p {
-          font-size: 1.2rem;
+        .portfolio-wrap .contain .row .col-12-md section .context p {
           text-align: center; }
 
   .main-wrap .contain .row {
     flex-direction: column; }
-    .main-wrap .contain .row .col-12-medium .sidebar {
-      width: 100%; }
-      .main-wrap .contain .row .col-12-medium .sidebar h3 {
-        font-size: 1.44rem; }
-      .main-wrap .contain .row .col-12-medium .sidebar .grid .row .col-6 a img {
-        width: 40vw;
-        height: 20vw; }
-      .main-wrap .contain .row .col-12-medium .sidebar a.button {
-        font-size: 1.44rem;
-        width: 100%; }
-      .main-wrap .contain .row .col-12-medium .sidebar section p {
-        font-size: 0.96rem; }
-      .main-wrap .contain .row .col-12-medium .sidebar section .link a {
-        font-size: 1.44rem; }
-      .main-wrap .contain .row .col-12-medium .sidebar section ul li a {
-        font-size: 0.96rem; }
-    .main-wrap .contain .row .col-12-medium .content {
-      width: 100%; }
-      .main-wrap .contain .row .col-12-medium .content section.last h2 {
-        font-size: 2rem; }
-      .main-wrap .contain .row .col-12-medium .content section.last p {
-        font-size: 0.96rem; }
-      .main-wrap .contain .row .col-12-medium .content section.last a.button__last {
-        font-size: 1.44rem; }
-      .main-wrap .contain .row .col-12-medium .content article h2 {
-        font-size: 2rem; }
-      .main-wrap .contain .row .col-12-medium .content article p {
-        font-size: 0.96rem; }
-      .main-wrap .contain .row .col-12-medium .content article h3 {
-        font-size: 1.44rem; }
-    .main-wrap .contain .row #main-text {
+    .main-wrap .contain .row div .sidebar {
       margin-bottom: 50px; }
+      .main-wrap .contain .row div .sidebar h3 {
+        font-size: 1.8rem;
+        text-align: center; }
+      .main-wrap .contain .row div .sidebar .grid .row {
+        flex-direction: row; }
+        .main-wrap .contain .row div .sidebar .grid .row .col-6 {
+          display: flex;
+          justify-content: center; }
+          .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
+            width: 320px;
+            height: 160px; }
+      .main-wrap .contain .row div .sidebar ul {
+        display: flex;
+        justify-content: center; }
+        .main-wrap .contain .row div .sidebar ul li {
+          width: 100%; }
+          .main-wrap .contain .row div .sidebar ul li a.button {
+            padding: 20px 44%;
+            margin: 0 auto; }
+      .main-wrap .contain .row div .sidebar section .link a {
+        font-size: 1.26rem;
+        padding: 20px 38%;
+        margin: 0 auto; }
+      .main-wrap .contain .row div .sidebar section ul li {
+        display: flex;
+        justify-content: center; }
+    .main-wrap .contain .row div .content section.last h2 {
+      text-align: center; }
+    .main-wrap .contain .row div .content section.last ul {
+      display: flex;
+      justify-content: center; }
+      .main-wrap .contain .row div .content section.last ul li {
+        width: 100%; }
+        .main-wrap .contain .row div .content section.last ul li a.button__last {
+          padding: 20px 33%; }
+
+  .main-no-wrap .contain .content article h2 {
+    font-size: 2rem;
+    text-align: center; }
+  .main-no-wrap .contain .content article p {
+    font-size: 0.96rem; }
+  .main-no-wrap .contain .content article h3 {
+    font-size: 1.44rem;
+    text-align: center; }
+
+  .footer-wrap #footer .row div {
+    display: flex;
+    justify-content: center; }
+    .footer-wrap #footer .row div div.widget h3 {
+      font-size: 1.44rem; }
+    .footer-wrap #footer .row div div.widget ul li a {
+      font-size: 0.96rem; }
+    .footer-wrap #footer .row div div.widget ul.contacts li a svg {
+      font-size: 2rem; }
+    .footer-wrap #footer .row div div.widget p span {
+      font-size: 0.96rem; }
+  .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li {
+    font-size: 0.96rem; }
+    .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li a {
+      font-size: 0.96rem; } }
+@media screen and (max-width: 768px) {
+  .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
+    width: 240px;
+    height: 120px; }
+  .main-wrap .contain .row div .sidebar ul li a.button {
+    padding: 20px 41%;
+    font-size: 1.26rem; }
+  .main-wrap .contain .row div .content section.last ul li a.button__last {
+    padding: 20px 29.5%;
+    font-size: 1.26rem; }
 
   .main-no-wrap .contain .content article h2 {
     font-size: 2rem; }
   .main-no-wrap .contain .content article p {
     font-size: 0.96rem; }
   .main-no-wrap .contain .content article h3 {
-    font-size: 1.44rem; }
+    font-size: 1.44rem; } }
+.footer-wrap #footer .row div div.widget h3 {
+  font-size: 1.8rem; }
+.footer-wrap #footer .row div div.widget ul li a {
+  font-size: 1.2rem; }
+.footer-wrap #footer .row div div.widget ul.contacts li a svg {
+  font-size: 2.5rem; }
+.footer-wrap #footer .row div div.widget p span {
+  font-size: 1.2rem; }
+.footer-wrap #footer .row:last-of-type .col-12 .copyright ul li {
+  font-size: 1.2rem; }
+  .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li a {
+    font-size: 1.2rem; }
 
-  .footer-wrap #footer .row div section.widget h3 {
-    font-size: 1.44rem; }
-  .footer-wrap #footer .row div section.widget ul li a {
-    font-size: 0.96rem; }
-  .footer-wrap #footer .row div section.widget ul.contacts li a svg {
+@media screen and (max-width: 576px) {
+  .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
+    width: 200px;
+    height: 100px; }
+  .main-wrap .contain .row div .content section.last ul li a.button__last {
+    padding: 20px 26%;
+    font-size: 1.26rem; }
+
+  .main-no-wrap .contain .content article h2 {
     font-size: 2rem; }
-  .footer-wrap #footer .row div section.widget p span {
+  .main-no-wrap .contain .content article p {
     font-size: 0.96rem; }
-  .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li {
-    font-size: 0.96rem; }
-    .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li a {
-      font-size: 0.96rem; } }
+  .main-no-wrap .contain .content article h3 {
+    font-size: 1.44rem; } }
 
 /*# sourceMappingURL=style.css.map */

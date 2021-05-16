@@ -48,7 +48,6 @@ body {
 	background: rgb(238, 222, 196) url('img/bg.jpg');
 }
 .wrapper {
-    position: relative;
     overflow-x: hidden;
 }
 .content-wrap {
@@ -183,7 +182,6 @@ h2, h3 {
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
-			
 			ul.navig {
 				display: flex;
 				li.navig__item {
@@ -207,6 +205,9 @@ h2, h3 {
 						left: 0;
 						display: none;
 						margin-top: 15px;
+						&:hover li.navig__item:nth-of-type(2) {
+							background-color: white;
+						}
 						li.subnav__item {
 							
 							width: 150%;
@@ -227,7 +228,7 @@ h2, h3 {
 								left: 10%;
 								display: block;
 								border: 8px solid transparent;
-								border-bottom-color: white;
+								border-bottom-color: lightgreen;
 							}
 						}
 					}
@@ -281,8 +282,7 @@ h2, h3 {
 						a {
 							text-decoration: none;
 							font-size: $largestFont;
-							font-weight: bold;
-							
+							font-weight: bold;	
 						}
 						svg {
 							margin: 0 10px;
@@ -332,7 +332,7 @@ h2, h3 {
 	padding: 50px 0;
 	.contain {
 		.row {
-			.col-12-medium {
+			.col-12-md{
 				section {
 					background-color: white;
 					width: 375px;
@@ -378,7 +378,7 @@ h2, h3 {
 	border-bottom: $border;
 	.contain {
 		.row {
-			.col-12-medium {
+			div {
 				.sidebar {
 					h3 {
 						margin-bottom: 30px;
@@ -388,6 +388,7 @@ h2, h3 {
 					.grid {
 						margin-bottom: 40px;
 						.row {
+							// flex-direction: column;
 							.col-6 {
 								a {
 									img {
@@ -400,22 +401,26 @@ h2, h3 {
 							}
 						}
 					}
-					a.button {
-						padding: 20px 40px;
-						border-radius: $borderRadius;
-						color: white;
-						position: relative;
-						transition: $transition;
-						font-size: $midFont;
-						font-weight: bold;
-						background: $buttonColor;
-						&:hover {
-							text-decoration: none;
-							transition: $transition;
-							background: $buttonColorHover;
-						}
-						strong {
-							margin-left: 10px;
+					ul {
+						li {
+							a.button {
+								padding: 20px 40px;
+								border-radius: $borderRadius;
+								color: white;
+								position: relative;
+								transition: $transition;
+								font-size: $midFont;
+								font-weight: bold;
+								background: $buttonColor;
+								&:hover {
+									text-decoration: none;
+									transition: $transition;
+									background: $buttonColorHover;
+								}
+								strong {
+									margin-left: 10px;
+								}
+							}
 						}
 					}
 					section {
@@ -443,6 +448,8 @@ h2, h3 {
 							}
 						}
 						ul {
+							display: flex;
+							flex-direction: column;
 							li {
 								padding: 10px 0;
 								a {
@@ -470,21 +477,25 @@ h2, h3 {
 							font-size: $smallFont;
 							color: $mainColor;
 						}
-						a.button__last {
-							padding: 10px 30px;
-							color: white;
-							border-radius: $borderRadius;
-							font-size: $midFont;
-							transition: $transition;
-							font-weight: bold;
-							background: $buttonColor;
-							&:hover {
-								background: $buttonColorHover;
-								text-decoration: none;
-								transition: $transition;
-							}
-							strong {
-								margin-left: 10px;
+						ul {
+							li {
+								a.button__last {
+									padding: 10px 30px;
+									color: white;
+									border-radius: $borderRadius;
+									font-size: $midFont;
+									transition: $transition;
+									font-weight: bold;
+									background: $buttonColor;
+									&:hover {
+										background: $buttonColorHover;
+										text-decoration: none;
+										transition: $transition;
+									}
+									strong {
+										margin-left: 10px;
+									}
+								}
 							}
 						}
 					}
@@ -493,6 +504,7 @@ h2, h3 {
 							margin-bottom: 40px;
 							font-size: $bigFont;
 							color: $mainColor;
+							text-align: center;
 						}
 						p {
 							margin-bottom: 30px;
@@ -504,9 +516,10 @@ h2, h3 {
 							margin-bottom: 20px;
 							font-size: $midFont;
 							color: $mainColor;
+							text-align: center;
 						}
 					}
-				}
+				}	
 			}
 		}
 	}
@@ -544,7 +557,12 @@ h2, h3 {
 	#footer {
 		.row {
 			div {
-				section.widget {
+				// display: flex;
+				// justify-content: center;
+				div.widget {
+					display: flex;
+					flex-direction: column;
+					margin-bottom: 20px;
 					h3 {
 						font-size: $midFont;
 						margin-bottom: 20px;
@@ -733,7 +751,7 @@ section.navig-panel {
 	.portfolio-wrap {
 		.contain {
 			.row {
-				.col-12-medium {
+				.col-12-md {
 					section {
 						width: 300px;
 						a {
@@ -763,7 +781,7 @@ section.navig-panel {
 	.main-wrap {
 		.contain {
 			.row {
-				.col-12-medium {
+				div {
 					.sidebar {
 						h3 {
 							font-size: $midFont * 0.9;
@@ -780,8 +798,12 @@ section.navig-panel {
 								}
 							}
 						}
-						a.button {
-							font-size: $midFont * 0.9;
+						ul {
+							li {
+								a.button {
+									font-size: $midFont * 0.9;
+								}
+							}
 						}
 						section {
 							p {
@@ -809,8 +831,12 @@ section.navig-panel {
 							p {
 								font-size: $smallFont * 0.9;
 							}
-							a.button__last {
-								font-size: $midFont * 0.9;
+							ul {
+								li {
+									a.button__last {
+										font-size: $midFont * 0.9;
+									}
+								}
 							}
 						}
 						article {
@@ -850,7 +876,7 @@ section.navig-panel {
 		#footer {
 			.row {
 				div {
-					section.widget {
+					div.widget {
 						h3 {
 							font-size: $midFont * 0.85;
 						}
@@ -988,7 +1014,7 @@ section.navig-panel {
 		.contain {
 			.row {
 				flex-direction: column;
-				.col-12-medium {
+				.col-12-md {
 					margin-bottom: 20px;
 					section {
 						width: 89vw;
@@ -1001,16 +1027,13 @@ section.navig-panel {
 						.context {
 							.heading {
 								h2 {
-									font-size: $midFont;
 									text-align: center;
 								}
 								p {
-									font-size: $smallFont;
 									text-align: center;
 								}
 							}
 							p {
-								font-size: $smallFont;
 								text-align: center;
 							}
 						}
@@ -1023,75 +1046,72 @@ section.navig-panel {
 		.contain {
 			.row {
 				flex-direction: column;
-				.col-12-medium {
-					// width: 100%;
+				div {
 					.sidebar {
-						width: 100%;
+						margin-bottom: 50px;
 						h3 {
-							font-size: $midFont * 0.8;
+							font-size: $midFont;
+							text-align: center;
 						}
 						.grid {
 							.row {
+								flex-direction: row;
 								.col-6 {
+									display: flex;
+									justify-content: center;
 									a {
 										img {
-											width: 40vw;
-											height: 20vw;
+											width: 320px;
+											height: 160px;
 										}
 									}
 								}
 							}
 						}
-						a.button {
-							font-size: $midFont * 0.8;
-							width: 100%;
+						ul {
+							display: flex;
+							justify-content: center;
+							li {
+								width: 100%;
+								a.button {
+									padding: 20px 44%;
+									margin: 0 auto;
+								}
+							}
 						}
 						section {
-							p {
-								font-size: $smallFont * 0.8;
-							}
 							.link {
 								a {
-									font-size: $midFont * 0.8;
+									font-size: $midFont * 0.7;
+									padding: 20px 38%;
+									margin: 0 auto;
 								}
 							}
 							ul {
 								li {
-									a {
-										font-size: $smallFont * 0.8;
-									}
+									display: flex;
+									justify-content: center;
 								}
 							}
 						}
 					}
 					.content {
-						width: 100%;
 						section.last {
 							h2 {
-								font-size: $bigFont * 0.8;
+								text-align: center;
 							}
-							p {
-								font-size: $smallFont * 0.8;
-							}
-							a.button__last {
-								font-size: $midFont * 0.8;
-							}
-						}
-						article {
-							h2 {
-								font-size: $bigFont * 0.8;
-							}
-							p {
-								font-size: $smallFont * 0.8;
-							}
-							h3 {
-								font-size: $midFont * 0.8;
+							ul {
+								display: flex;
+								justify-content: center;
+								li {
+									width: 100%;
+									a.button__last {
+										padding: 20px 33%;
+									}
+								}
 							}
 						}
 					}
-				}
-				#main-text {
-					margin-bottom: 50px;
 				}
 			}
 		}
@@ -1102,12 +1122,14 @@ section.navig-panel {
 				article {
 					h2 {
 						font-size: $bigFont * 0.8;
+						text-align: center;
 					}
 					p {
 						font-size: $smallFont * 0.8;
 					}
 					h3 {
 						font-size: $midFont * 0.8;
+						text-align: center;
 					}
 				}
 			}
@@ -1117,7 +1139,9 @@ section.navig-panel {
 		#footer {
 			.row {
 				div {
-					section.widget {
+					display: flex;
+					justify-content: center;
+					div.widget {
 						h3 {
 							font-size: $midFont * 0.8;
 						}
@@ -1156,6 +1180,169 @@ section.navig-panel {
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.main-wrap {
+		.contain {
+			.row {
+				div {
+					.sidebar {
+						.grid {
+							.row {
+								.col-6 {
+									a {
+										img {
+											width: 240px;
+											height: 120px;
+										}
+									}
+								}
+							}
+						}
+						ul {
+							li {
+								a.button {
+									padding: 20px 41%;
+									font-size: $midFont * 0.7;
+								}
+							}
+						}
+					}
+					.content {
+						section.last {
+							ul {
+								li {
+									a.button__last {
+										padding: 20px 29.5%;
+										font-size: $midFont * 0.7;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.main-no-wrap {
+		.contain {
+			.content {
+				article {
+					h2 {
+						font-size: $bigFont * 0.8;
+					}
+					p {
+						font-size: $smallFont * 0.8;
+					}
+					h3 {
+						font-size: $midFont * 0.8;
+					}
+				}
+			}
+		}
+	}
+}
+.footer-wrap {
+	#footer {
+		.row {
+			div {
+				div.widget {
+					h3 {
+						font-size: $midFont;
+					}
+					ul {
+						li {
+							a {
+								font-size: $smallFont;
+							}
+						}
+					}
+					ul.contacts{
+						li {
+							a {
+								svg {
+									font-size: $bigFont;
+								}
+							}
+						}
+					}
+					p {
+						span {
+							font-size: $smallFont;
+						}
+					}
+				}
+			}
+			&:last-of-type {
+				.col-12 {
+					.copyright {
+						ul {
+							li {
+								font-size: $smallFont;
+								a {
+									font-size: $smallFont;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.main-wrap {
+		.contain {
+			.row {
+				div {
+					.sidebar {
+						.grid {
+							.row {
+								.col-6 {
+									a {
+										img {
+											width: 200px;
+											height: 100px;
+										}
+									}
+								}
+							}
+						}
+					}
+					.content {
+						section.last {
+							ul {
+								li {
+									a.button__last {
+										padding: 20px 26%;
+										font-size: $midFont * 0.7;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.main-no-wrap {
+		.contain {
+			.content {
+				article {
+					h2 {
+						font-size: $bigFont * 0.8;
+					}
+					p {
+						font-size: $smallFont * 0.8;
+					}
+					h3 {
+						font-size: $midFont * 0.8;
 					}
 				}
 			}
