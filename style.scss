@@ -124,25 +124,22 @@ h2, h3 {
 		width: 100%;
 		flex-direction: column;
 		a {
-			padding: 0 30px;
+			padding: 8px 30px;
 			width: 90%;
 			margin: 0 auto;
 			margin-top: 8px;
 			margin-bottom: 6px;
-			font-size: $smallFont * 0.8;
+			font-size: 1.2rem;
+			color: $mainColor;
 			border-bottom: 1px solid lightgray;
 			&:hover {
 				text-decoration: none;
 				font-weight: normal;
 				
 			}
-			span {
-				font-size: 1.2rem;
-				color: $mainColor;
-			}
-			span.special {
-				font-weight: $mainColor;
-			}
+		}
+		a.special {
+			font-weight: bold;
 		}
 	}	
 .navig-panel-active {
@@ -177,7 +174,7 @@ h2, h3 {
 				align-items: center;
 			}
 		}
-		.nav {
+		.navigation {
 			width: 720px;
 			display: flex;
 			justify-content: flex-end;
@@ -194,6 +191,7 @@ h2, h3 {
 						font-weight: bold;
 						font-size: $smallFont;
 						letter-spacing: 1px;
+						padding-bottom: 25px;
 						text-decoration: none;
 					}
 					ul.subnav {
@@ -209,11 +207,11 @@ h2, h3 {
 							background-color: white;
 						}
 						li.subnav__item {
-							
 							width: 150%;
 							position: relative;
 							padding: 10px 10px 10px 15px;
 							border-bottom: $border;
+							transition: 0.6s;
 							background: white;
 							a.subnav__link {
 								text-decoration: none;
@@ -236,6 +234,13 @@ h2, h3 {
 						ul.subnav {
 							transition: $transition;
 							display: block;
+							li.subnav__item:hover {
+								background-color: lightblue;
+								transition: 0.6s;
+							}
+							li.subnav__item:last-of-type {
+								border-bottom: 0;
+							}
 						}
 					}
 					&:hover {
@@ -252,7 +257,7 @@ h2, h3 {
 .hero-wrap {
 	#hero {
 		background: white;
-		.hero__row {
+		.hero-stand {
 			padding: 70px;
 			display: flex;
 			justify-content: space-between;
@@ -385,23 +390,20 @@ h2, h3 {
 						font-size: $midFont;
 						color: $mainColor;
 					}
-					.grid {
-						margin-bottom: 40px;
-						.row {
-							// flex-direction: column;
-							.col-6 {
-								a {
-									img {
-										width: 180px;
-										height: 90px;
-										margin-bottom: 20px;
-										border-radius: $borderRadius * 2;
-									}
+					.row {
+						.col-6 {
+							a {
+								img {
+									width: 180px;
+									height: 90px;
+									margin-bottom: 20px;
+									border-radius: $borderRadius * 2;
 								}
 							}
 						}
-					}
+					}		
 					ul {
+						margin-top: 20px;
 						li {
 							a.button {
 								padding: 20px 40px;
@@ -465,7 +467,7 @@ h2, h3 {
 				}
 				.content {
 					margin-left: 40px;
-					section.last {
+					section.content__sec {
 						h2 {
 							margin-bottom: 40px;
 							font-size: $bigFont;
@@ -479,7 +481,7 @@ h2, h3 {
 						}
 						ul {
 							li {
-								a.button__last {
+								a.content__button {
 									padding: 10px 30px;
 									color: white;
 									border-radius: $borderRadius;
@@ -557,8 +559,6 @@ h2, h3 {
 	#footer {
 		.row {
 			div {
-				// display: flex;
-				// justify-content: center;
 				div.widget {
 					display: flex;
 					flex-direction: column;
@@ -634,65 +634,6 @@ h2, h3 {
 		}
 	}
 }
-section.navig-panel {
-	display: flex;
-	transform: translateX(-22%);
-	#toggle {
-		display: flex;
-		align-items: center;
-		margin: 0;
-		justify-content: center;
-		display: block;
-		width: 60px;
-		margin: 10px 0 0 10px;
-		height: 40px;
-		position: relative;
-		opacity: .5;
-		border-radius: $borderRadius;
-		background: $mainColor;
-			span,
-			span::before,
-			span::after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 50%;
-				margin-top: -1px;
-				margin-left: -10px;
-				left: 50%;
-				width: 20px;
-				height: 3px;
-				background: white;
-			}
-			span::before {
-				transform: translateY(5px);
-			}
-			span::after {
-				transform: translateY(-5px);
-			}
-		}
-		&:active {
-			background: rgb(29, 28, 28);
-			transition: 0.3s;
-		}
-	}
-	.panel {
-		display: flex;
-		flex-direction: column;
-		a {
-			padding: 10px 30px;
-			&:hover {
-				text-decoration: none;
-			}
-			span {
-				font-size: 1.2rem;
-				color: $mainColor;
-			}
-			span.special {
-				font-weight: bold;
-			}
-		}
-	}	
 //ADAPTIVE
 @media screen and (max-width: 1270px) {
 	#header,
@@ -710,7 +651,7 @@ section.navig-panel {
 				font-size: 0.95rem;
 			}
 		}
-		.nav {
+		.navigation {
 			width: 620px;
 			ul.navig {
 				li.navig__item {
@@ -724,7 +665,7 @@ section.navig-panel {
 	}
 	.hero-wrap {
 		#hero {
-			.hero__row {
+			.hero-stand {
 				padding: 60px;
 				div.column-1 {
 					width: 60%;
@@ -786,14 +727,12 @@ section.navig-panel {
 						h3 {
 							font-size: $midFont * 0.9;
 						}
-						.grid {
-							.row {
-								.col-6 {
-									a {
-										img {
-											width: 150px;
-											height: 75px;
-										}
+						.row {
+							.col-6 {
+								a {
+									img {
+										width: 150px;
+										height: 75px;
 									}
 								}
 							}
@@ -824,7 +763,7 @@ section.navig-panel {
 						}
 					}
 					.content {
-						section.last {
+						section.content__sec {
 							h2 {
 								font-size: $bigFont * 0.9;
 							}
@@ -833,7 +772,7 @@ section.navig-panel {
 							}
 							ul {
 								li {
-									a.button__last {
+									a.content__button {
 										font-size: $midFont * 0.9;
 									}
 								}
@@ -947,7 +886,7 @@ section.navig-panel {
 				text-align: center;
 			}
 		}
-		.nav {
+		.navigation {
 			ul.navig {
 				li.navig__item {
 					display: none;
@@ -961,7 +900,7 @@ section.navig-panel {
 	}
 	.hero-wrap {
 		#hero {
-			.hero__row {
+			.hero-stand {
 				padding: 60px;
 				flex-direction: column;
 				div.column-1 {
@@ -1053,21 +992,19 @@ section.navig-panel {
 							font-size: $midFont;
 							text-align: center;
 						}
-						.grid {
-							.row {
-								flex-direction: row;
-								.col-6 {
-									display: flex;
-									justify-content: center;
-									a {
-										img {
-											width: 320px;
-											height: 160px;
-										}
+						.row {
+							flex-direction: row;
+							.col-6 {
+								display: flex;
+								justify-content: center;
+								a {
+									img {
+										width: 320px;
+										height: 160px;
 									}
 								}
 							}
-						}
+						}	
 						ul {
 							display: flex;
 							justify-content: center;
@@ -1096,7 +1033,7 @@ section.navig-panel {
 						}
 					}
 					.content {
-						section.last {
+						section.content__sec {
 							h2 {
 								text-align: center;
 							}
@@ -1105,7 +1042,7 @@ section.navig-panel {
 								justify-content: center;
 								li {
 									width: 100%;
-									a.button__last {
+									a.content__button {
 										padding: 20px 33%;
 									}
 								}
@@ -1192,18 +1129,16 @@ section.navig-panel {
 			.row {
 				div {
 					.sidebar {
-						.grid {
-							.row {
-								.col-6 {
-									a {
-										img {
-											width: 240px;
-											height: 120px;
-										}
+						.row {
+							.col-6 {
+								a {
+									img {
+										width: 240px;
+										height: 120px;
 									}
 								}
 							}
-						}
+						}	
 						ul {
 							li {
 								a.button {
@@ -1214,10 +1149,10 @@ section.navig-panel {
 						}
 					}
 					.content {
-						section.last {
+						section.content__sec {
 							ul {
 								li {
-									a.button__last {
+									a.content__button {
 										padding: 20px 29.5%;
 										font-size: $midFont * 0.7;
 									}
@@ -1302,24 +1237,22 @@ section.navig-panel {
 			.row {
 				div {
 					.sidebar {
-						.grid {
-							.row {
-								.col-6 {
-									a {
-										img {
-											width: 200px;
-											height: 100px;
-										}
+						.row {
+							.col-6 {
+								a {
+									img {
+										width: 200px;
+										height: 100px;
 									}
 								}
 							}
-						}
+						}	
 					}
 					.content {
-						section.last {
+						section.content__sec {
 							ul {
 								li {
-									a.button__last {
+									a.content__button {
 										padding: 20px 26%;
 										font-size: $midFont * 0.7;
 									}

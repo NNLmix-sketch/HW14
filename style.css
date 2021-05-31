@@ -115,21 +115,19 @@ h2, h3 {
   width: 100%;
   flex-direction: column; }
   .panel a {
-    padding: 0 30px;
+    padding: 8px 30px;
     width: 90%;
     margin: 0 auto;
     margin-top: 8px;
     margin-bottom: 6px;
-    font-size: 0.96rem;
+    font-size: 1.2rem;
+    color: #4d4b4b;
     border-bottom: 1px solid lightgray; }
     .panel a:hover {
       text-decoration: none;
       font-weight: normal; }
-    .panel a span {
-      font-size: 1.2rem;
-      color: #4d4b4b; }
-    .panel a span.special {
-      font-weight: #4d4b4b; }
+  .panel a.special {
+    font-weight: bold; }
 
 .navig-panel-active {
   transform: translateX(0%); }
@@ -158,25 +156,26 @@ h2, h3 {
         font-weight: bold;
         color: #4d4b4b;
         align-items: center; }
-    .header-wrap #header .nav {
+    .header-wrap #header .navigation {
       width: 720px;
       display: flex;
       justify-content: flex-end;
       align-items: center; }
-      .header-wrap #header .nav ul.navig {
+      .header-wrap #header .navigation ul.navig {
         display: flex; }
-        .header-wrap #header .nav ul.navig li.navig__item {
+        .header-wrap #header .navigation ul.navig li.navig__item {
           padding: 10px;
           transition: all 1s;
           margin-left: 15px;
           position: relative; }
-          .header-wrap #header .nav ul.navig li.navig__item a.navig__link {
+          .header-wrap #header .navigation ul.navig li.navig__item a.navig__link {
             color: #4d4b4b;
             font-weight: bold;
             font-size: 1.2rem;
             letter-spacing: 1px;
+            padding-bottom: 25px;
             text-decoration: none; }
-          .header-wrap #header .nav ul.navig li.navig__item ul.subnav {
+          .header-wrap #header .navigation ul.navig li.navig__item ul.subnav {
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -185,18 +184,19 @@ h2, h3 {
             left: 0;
             display: none;
             margin-top: 15px; }
-            .header-wrap #header .nav ul.navig li.navig__item ul.subnav:hover li.navig__item:nth-of-type(2) {
+            .header-wrap #header .navigation ul.navig li.navig__item ul.subnav:hover li.navig__item:nth-of-type(2) {
               background-color: white; }
-            .header-wrap #header .nav ul.navig li.navig__item ul.subnav li.subnav__item {
+            .header-wrap #header .navigation ul.navig li.navig__item ul.subnav li.subnav__item {
               width: 150%;
               position: relative;
               padding: 10px 10px 10px 15px;
               border-bottom: 2px solid lightgray;
+              transition: 0.6s;
               background: white; }
-              .header-wrap #header .nav ul.navig li.navig__item ul.subnav li.subnav__item a.subnav__link {
+              .header-wrap #header .navigation ul.navig li.navig__item ul.subnav li.subnav__item a.subnav__link {
                 text-decoration: none;
                 color: #4d4b4b; }
-              .header-wrap #header .nav ul.navig li.navig__item ul.subnav li.subnav__item:first-of-type::before {
+              .header-wrap #header .navigation ul.navig li.navig__item ul.subnav li.subnav__item:first-of-type::before {
                 content: "";
                 width: 0;
                 height: 0;
@@ -206,70 +206,75 @@ h2, h3 {
                 display: block;
                 border: 8px solid transparent;
                 border-bottom-color: lightgreen; }
-          .header-wrap #header .nav ul.navig li.navig__item:nth-of-type(2):hover ul.subnav {
+          .header-wrap #header .navigation ul.navig li.navig__item:nth-of-type(2):hover ul.subnav {
             transition: all 1s;
             display: block; }
-          .header-wrap #header .nav ul.navig li.navig__item:hover {
+            .header-wrap #header .navigation ul.navig li.navig__item:nth-of-type(2):hover ul.subnav li.subnav__item:hover {
+              background-color: lightblue;
+              transition: 0.6s; }
+            .header-wrap #header .navigation ul.navig li.navig__item:nth-of-type(2):hover ul.subnav li.subnav__item:last-of-type {
+              border-bottom: 0; }
+          .header-wrap #header .navigation ul.navig li.navig__item:hover {
             border-radius: 5px;
             transition: all 1s;
             background: white; }
 
 .hero-wrap #hero {
   background: white; }
-  .hero-wrap #hero .hero__row {
+  .hero-wrap #hero .hero-stand {
     padding: 70px;
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
     border-bottom: 2px solid lightgray; }
-    .hero-wrap #hero .hero__row div.column-1 {
+    .hero-wrap #hero .hero-stand div.column-1 {
       width: 60%; }
-      .hero-wrap #hero .hero__row div.column-1 h2 {
+      .hero-wrap #hero .hero-stand div.column-1 h2 {
         font-size: 3rem;
         margin: 5px 0 20px 0;
         color: #4d4b4b; }
-      .hero-wrap #hero .hero__row div.column-1 p {
+      .hero-wrap #hero .hero-stand div.column-1 p {
         font-size: 3rem;
         line-height: 70px;
         color: #4d4b4b; }
-    .hero-wrap #hero .hero__row div.column-2 {
+    .hero-wrap #hero .hero-stand div.column-2 {
       width: 40%; }
-      .hero-wrap #hero .hero__row div.column-2 ul {
+      .hero-wrap #hero .hero-stand div.column-2 ul {
         margin-left: 30px; }
-        .hero-wrap #hero .hero__row div.column-2 ul li {
+        .hero-wrap #hero .hero-stand div.column-2 ul li {
           padding: 25px 30px;
           border-radius: 5px;
           position: relative; }
-          .hero-wrap #hero .hero__row div.column-2 ul li a {
+          .hero-wrap #hero .hero-stand div.column-2 ul li a {
             text-decoration: none;
             font-size: 3rem;
             font-weight: bold; }
-          .hero-wrap #hero .hero__row div.column-2 ul li svg {
+          .hero-wrap #hero .hero-stand div.column-2 ul li svg {
             margin: 0 10px; }
-          .hero-wrap #hero .hero__row div.column-2 ul li .fa-arrow-circle-right {
+          .hero-wrap #hero .hero-stand div.column-2 ul li .fa-arrow-circle-right {
             position: absolute;
             top: 40%;
             cursor: pointer; }
-          .hero-wrap #hero .hero__row div.column-2 ul li .fa-question-circle {
+          .hero-wrap #hero .hero-stand div.column-2 ul li .fa-question-circle {
             position: absolute;
             top: 40%;
             cursor: pointer; }
-          .hero-wrap #hero .hero__row div.column-2 ul li:first-of-type {
+          .hero-wrap #hero .hero-stand div.column-2 ul li:first-of-type {
             background: #1f9aff;
             transition: all 1s;
             margin-bottom: 20px; }
-            .hero-wrap #hero .hero__row div.column-2 ul li:first-of-type a {
+            .hero-wrap #hero .hero-stand div.column-2 ul li:first-of-type a {
               color: white;
               padding: 20px; }
-            .hero-wrap #hero .hero__row div.column-2 ul li:first-of-type:hover {
+            .hero-wrap #hero .hero-stand div.column-2 ul li:first-of-type:hover {
               background: #116fbb; }
-          .hero-wrap #hero .hero__row div.column-2 ul li:last-of-type {
+          .hero-wrap #hero .hero-stand div.column-2 ul li:last-of-type {
             transition: all 1s;
             background: #faf7f1; }
-            .hero-wrap #hero .hero__row div.column-2 ul li:last-of-type a {
+            .hero-wrap #hero .hero-stand div.column-2 ul li:last-of-type a {
               color: #4d4b4b;
               padding: 25px; }
-            .hero-wrap #hero .hero__row div.column-2 ul li:last-of-type:hover {
+            .hero-wrap #hero .hero-stand div.column-2 ul li:last-of-type:hover {
               transition: all 1s;
               background: #fdedcc; }
 
@@ -309,28 +314,28 @@ h2, h3 {
     margin-bottom: 30px;
     font-size: 1.8rem;
     color: #4d4b4b; }
-  .main-wrap .contain .row div .sidebar .grid {
-    margin-bottom: 40px; }
-    .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
-      width: 180px;
-      height: 90px;
-      margin-bottom: 20px;
-      border-radius: 10px; }
-  .main-wrap .contain .row div .sidebar ul li a.button {
-    padding: 20px 40px;
-    border-radius: 5px;
-    color: white;
-    position: relative;
-    transition: all 1s;
-    font-size: 1.8rem;
-    font-weight: bold;
-    background: #1f9aff; }
-    .main-wrap .contain .row div .sidebar ul li a.button:hover {
-      text-decoration: none;
+  .main-wrap .contain .row div .sidebar .row .col-6 a img {
+    width: 180px;
+    height: 90px;
+    margin-bottom: 20px;
+    border-radius: 10px; }
+  .main-wrap .contain .row div .sidebar ul {
+    margin-top: 20px; }
+    .main-wrap .contain .row div .sidebar ul li a.button {
+      padding: 20px 40px;
+      border-radius: 5px;
+      color: white;
+      position: relative;
       transition: all 1s;
-      background: #116fbb; }
-    .main-wrap .contain .row div .sidebar ul li a.button strong {
-      margin-left: 10px; }
+      font-size: 1.8rem;
+      font-weight: bold;
+      background: #1f9aff; }
+      .main-wrap .contain .row div .sidebar ul li a.button:hover {
+        text-decoration: none;
+        transition: all 1s;
+        background: #116fbb; }
+      .main-wrap .contain .row div .sidebar ul li a.button strong {
+        margin-left: 10px; }
   .main-wrap .contain .row div .sidebar section {
     margin-bottom: 70px; }
     .main-wrap .contain .row div .sidebar section p {
@@ -362,16 +367,16 @@ h2, h3 {
           text-decoration: none; }
   .main-wrap .contain .row div .content {
     margin-left: 40px; }
-    .main-wrap .contain .row div .content section.last h2 {
+    .main-wrap .contain .row div .content section.content__sec h2 {
       margin-bottom: 40px;
       font-size: 2.5rem;
       color: #4d4b4b; }
-    .main-wrap .contain .row div .content section.last p {
+    .main-wrap .contain .row div .content section.content__sec p {
       margin-bottom: 30px;
       line-height: 2rem;
       font-size: 1.2rem;
       color: #4d4b4b; }
-    .main-wrap .contain .row div .content section.last ul li a.button__last {
+    .main-wrap .contain .row div .content section.content__sec ul li a.content__button {
       padding: 10px 30px;
       color: white;
       border-radius: 5px;
@@ -379,11 +384,11 @@ h2, h3 {
       transition: all 1s;
       font-weight: bold;
       background: #1f9aff; }
-      .main-wrap .contain .row div .content section.last ul li a.button__last:hover {
+      .main-wrap .contain .row div .content section.content__sec ul li a.content__button:hover {
         background: #116fbb;
         text-decoration: none;
         transition: all 1s; }
-      .main-wrap .contain .row div .content section.last ul li a.button__last strong {
+      .main-wrap .contain .row div .content section.content__sec ul li a.content__button strong {
         margin-left: 10px; }
     .main-wrap .contain .row div .content article h2 {
       margin-bottom: 40px;
@@ -469,56 +474,6 @@ h2, h3 {
           .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li a:hover {
             text-decoration: none; }
 
-section.navig-panel {
-  display: flex;
-  transform: translateX(-22%); }
-  section.navig-panel #toggle {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    justify-content: center;
-    display: block;
-    width: 60px;
-    margin: 10px 0 0 10px;
-    height: 40px;
-    position: relative;
-    opacity: .5;
-    border-radius: 5px;
-    background: #4d4b4b; }
-    section.navig-panel #toggle span,
-    section.navig-panel #toggle span::before,
-    section.navig-panel #toggle span::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      margin-top: -1px;
-      margin-left: -10px;
-      left: 50%;
-      width: 20px;
-      height: 3px;
-      background: white; }
-    section.navig-panel #toggle span::before {
-      transform: translateY(5px); }
-    section.navig-panel #toggle span::after {
-      transform: translateY(-5px); }
-  section.navig-panel:active {
-    background: #1d1c1c;
-    transition: 0.3s; }
-
-.panel {
-  display: flex;
-  flex-direction: column; }
-  .panel a {
-    padding: 10px 30px; }
-    .panel a:hover {
-      text-decoration: none; }
-    .panel a span {
-      font-size: 1.2rem;
-      color: #4d4b4b; }
-    .panel a span.special {
-      font-weight: bold; }
-
 @media screen and (max-width: 1270px) {
   #header,
   #hero,
@@ -531,24 +486,24 @@ section.navig-panel {
       font-size: 2.7rem; }
     #header .logo span {
       font-size: 0.95rem; }
-  #header .nav {
+  #header .navigation {
     width: 620px; }
-    #header .nav ul.navig li.navig__item {
+    #header .navigation ul.navig li.navig__item {
       margin-left: 12px; }
-      #header .nav ul.navig li.navig__item a.navig__link {
+      #header .navigation ul.navig li.navig__item a.navig__link {
         font-size: 1.14rem; }
 
-  .hero-wrap #hero .hero__row {
+  .hero-wrap #hero .hero-stand {
     padding: 60px; }
-    .hero-wrap #hero .hero__row div.column-1 {
+    .hero-wrap #hero .hero-stand div.column-1 {
       width: 60%; }
-      .hero-wrap #hero .hero__row div.column-1 h2 {
+      .hero-wrap #hero .hero-stand div.column-1 h2 {
         font-size: 2.7rem; }
-      .hero-wrap #hero .hero__row div.column-1 p {
+      .hero-wrap #hero .hero-stand div.column-1 p {
         font-size: 2.7rem; }
-    .hero-wrap #hero .hero__row div.column-2 {
+    .hero-wrap #hero .hero-stand div.column-2 {
       width: 40%; }
-      .hero-wrap #hero .hero__row div.column-2 ul li a {
+      .hero-wrap #hero .hero-stand div.column-2 ul li a {
         font-size: 2.4rem; }
 
   .portfolio-wrap .contain .row .col-12-md section {
@@ -565,7 +520,7 @@ section.navig-panel {
 
   .main-wrap .contain .row div .sidebar h3 {
     font-size: 1.62rem; }
-  .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
+  .main-wrap .contain .row div .sidebar .row .col-6 a img {
     width: 150px;
     height: 75px; }
   .main-wrap .contain .row div .sidebar ul li a.button {
@@ -576,11 +531,11 @@ section.navig-panel {
     font-size: 1.62rem; }
   .main-wrap .contain .row div .sidebar section ul li a {
     font-size: 1.08rem; }
-  .main-wrap .contain .row div .content section.last h2 {
+  .main-wrap .contain .row div .content section.content__sec h2 {
     font-size: 2.25rem; }
-  .main-wrap .contain .row div .content section.last p {
+  .main-wrap .contain .row div .content section.content__sec p {
     font-size: 1.08rem; }
-  .main-wrap .contain .row div .content section.last ul li a.button__last {
+  .main-wrap .contain .row div .content section.content__sec ul li a.content__button {
     font-size: 1.62rem; }
   .main-wrap .contain .row div .content article h2 {
     font-size: 2.25rem; }
@@ -631,47 +586,47 @@ section.navig-panel {
         margin-top: 10px;
         font-size: 1rem;
         text-align: center; }
-    #header .nav ul.navig li.navig__item {
+    #header .navigation ul.navig li.navig__item {
       display: none;
       margin-left: 12px; }
-      #header .nav ul.navig li.navig__item a.navig__link {
+      #header .navigation ul.navig li.navig__item a.navig__link {
         font-size: 1.08rem; }
 
-  .hero-wrap #hero .hero__row {
+  .hero-wrap #hero .hero-stand {
     padding: 60px;
     flex-direction: column; }
-    .hero-wrap #hero .hero__row div.column-1 {
+    .hero-wrap #hero .hero-stand div.column-1 {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column; }
-      .hero-wrap #hero .hero__row div.column-1 h2 {
+      .hero-wrap #hero .hero-stand div.column-1 h2 {
         font-size: 2.4rem; }
-      .hero-wrap #hero .hero__row div.column-1 p {
+      .hero-wrap #hero .hero-stand div.column-1 p {
         font-size: 2.4rem;
         text-align: center; }
-    .hero-wrap #hero .hero__row div.column-2 {
+    .hero-wrap #hero .hero-stand div.column-2 {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center; }
-      .hero-wrap #hero .hero__row div.column-2 ul {
+      .hero-wrap #hero .hero-stand div.column-2 ul {
         width: 100%; }
-        .hero-wrap #hero .hero__row div.column-2 ul li {
+        .hero-wrap #hero .hero-stand div.column-2 ul li {
           padding: 0;
           width: 100%;
           height: 90px;
           display: flex;
           align-items: center; }
-          .hero-wrap #hero .hero__row div.column-2 ul li a {
+          .hero-wrap #hero .hero-stand div.column-2 ul li a {
             width: 100%;
             font-size: 2.4rem;
             text-align: center; }
-          .hero-wrap #hero .hero__row div.column-2 ul li .fa-arrow-circle-right {
+          .hero-wrap #hero .hero-stand div.column-2 ul li .fa-arrow-circle-right {
             top: 35%;
             left: 80%; }
-          .hero-wrap #hero .hero__row div.column-2 ul li .fa-question-circle {
+          .hero-wrap #hero .hero-stand div.column-2 ul li .fa-question-circle {
             top: 35%;
             left: 80%; }
 
@@ -698,12 +653,12 @@ section.navig-panel {
       .main-wrap .contain .row div .sidebar h3 {
         font-size: 1.8rem;
         text-align: center; }
-      .main-wrap .contain .row div .sidebar .grid .row {
+      .main-wrap .contain .row div .sidebar .row {
         flex-direction: row; }
-        .main-wrap .contain .row div .sidebar .grid .row .col-6 {
+        .main-wrap .contain .row div .sidebar .row .col-6 {
           display: flex;
           justify-content: center; }
-          .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
+          .main-wrap .contain .row div .sidebar .row .col-6 a img {
             width: 320px;
             height: 160px; }
       .main-wrap .contain .row div .sidebar ul {
@@ -721,14 +676,14 @@ section.navig-panel {
       .main-wrap .contain .row div .sidebar section ul li {
         display: flex;
         justify-content: center; }
-    .main-wrap .contain .row div .content section.last h2 {
+    .main-wrap .contain .row div .content section.content__sec h2 {
       text-align: center; }
-    .main-wrap .contain .row div .content section.last ul {
+    .main-wrap .contain .row div .content section.content__sec ul {
       display: flex;
       justify-content: center; }
-      .main-wrap .contain .row div .content section.last ul li {
+      .main-wrap .contain .row div .content section.content__sec ul li {
         width: 100%; }
-        .main-wrap .contain .row div .content section.last ul li a.button__last {
+        .main-wrap .contain .row div .content section.content__sec ul li a.content__button {
           padding: 20px 33%; }
 
   .main-no-wrap .contain .content article h2 {
@@ -756,13 +711,13 @@ section.navig-panel {
     .footer-wrap #footer .row:last-of-type .col-12 .copyright ul li a {
       font-size: 0.96rem; } }
 @media screen and (max-width: 768px) {
-  .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
+  .main-wrap .contain .row div .sidebar .row .col-6 a img {
     width: 240px;
     height: 120px; }
   .main-wrap .contain .row div .sidebar ul li a.button {
     padding: 20px 41%;
     font-size: 1.26rem; }
-  .main-wrap .contain .row div .content section.last ul li a.button__last {
+  .main-wrap .contain .row div .content section.content__sec ul li a.content__button {
     padding: 20px 29.5%;
     font-size: 1.26rem; }
 
@@ -786,10 +741,10 @@ section.navig-panel {
     font-size: 1.2rem; }
 
 @media screen and (max-width: 576px) {
-  .main-wrap .contain .row div .sidebar .grid .row .col-6 a img {
+  .main-wrap .contain .row div .sidebar .row .col-6 a img {
     width: 200px;
     height: 100px; }
-  .main-wrap .contain .row div .content section.last ul li a.button__last {
+  .main-wrap .contain .row div .content section.content__sec ul li a.content__button {
     padding: 20px 26%;
     font-size: 1.26rem; }
 
